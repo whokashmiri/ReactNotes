@@ -1,6 +1,3 @@
-# ReactNotes
-this a react notes repo for interviews. it do have code Check readme
-
 
 ---Component
 it is block of code which performs some function
@@ -53,4 +50,6 @@ useEffect or called as side effect function
 --The useEffect hook is used to perform side effects in your functional components, such as fetching data, subscribing to external events, or manually changing the DOM. It combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount in class components.
 --Whenever we want to some operations based on the life cycle of components, useEffect hook is called. it is connected to the Lifecycle of a component/
 --useEffect is called on every render
-
+--by default useEffect will be called for render and every rerender
+--[] useEffect will be called for first time /Mounting only if we a empty dependency array. Dependencies are variables
+--[variable] if you a dependency array- useEffect will be called for the first time but i will be called for every dependency variable change in simple words if the dependency variable changes
