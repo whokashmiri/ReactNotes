@@ -1,12 +1,13 @@
-import Counter from './Components/Counter'
+// import Counter from './Components/Counter'
 import './App.css'
-import { useState } from 'react'
+
+import { Effect } from './Components/Effect'
 
 function App() {
-  const [count, setCounter]= useState(0)
-  const increment = ()=>{
-    setCounter(count+1)
-  }
+  // const [count, setCounter]= useState(0)
+  // const increment = ()=>{
+  //   setCounter(count+1)
+  // }
  
  
   
@@ -14,8 +15,9 @@ function App() {
   return (
     <>
       {/* <Counter btnText="waok"/> */}
-      <Counter count={ count} increment={increment}/>
-     <h1>Hello</h1>
+      {/* <Counter count={ count} increment={increment}/>
+     <h1>Hello</h1> */}
+     <Effect/>
   
     </>
   )
