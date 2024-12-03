@@ -25,7 +25,7 @@ to the components- WE PASS THEN AS PROPS
 useState--
 ---State- Data of a component
 --State is created inside the components while as props are created in different component and the passed as props from that component
---useState is used to change the state 
+--useState is used to create the state variables
     -- it gives us two things a variable and a function to change the state 
     --variable will hold the initial state 
     -- and the function will help you to change the state
@@ -53,3 +53,19 @@ useEffect or called as side effect function
 --by default useEffect will be called for render and every rerender
 --[] useEffect will be called for first time /Mounting only if we a empty dependency array. Dependencies are variables
 --[variable] if you a dependency array- useEffect will be called for the first time but i will be called for every dependency variable change in simple words if the dependency variable changes
+
+
+
+useRef
+--Normal variable don't persist
+--You can use it to persist or preserve values between re-renders.
+--(means they don't keep the change after the component render or rerender like state Variables)
+--The useRef hook takes an initial value of any type as argument and returns an object with a single current property. (internally created as object and that object has a property current which hold the value of useRef variable)
+--what if we want a variable which persist and doesn't want to a state variable
+
+useCallBack
+--Cache a function definition so that it doesn't get recreated on every render.
+--use to save the rerenders of the child component
+{if you have a child component when you render the parent component (by any means like useState) it rerenders the child the child component also that is a un necessary render in order to the child component from rerendering wrap the child component in Memo}
+--till the value of the props will not change the component will not re-render
+--if you passing a functions in props then react.memo wont save you from rerendering. then the function we recreate after re-render- in order to save the functions for re-creating after re-render or freeze the function from recreating useCallBack comes to help
