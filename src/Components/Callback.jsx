@@ -9,7 +9,7 @@ const Callback = () => {
     // }
     let handleClick=useCallback(()=>{
         setfirst(first+1)
-    },[])
+    })
   return (
     <div>
         <h3>Count: {first}</h3>
