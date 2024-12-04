@@ -1,3 +1,51 @@
+== hooks: 
+1. useState 2. useEffect 3. useContext 4. useReducer 5.useMemo 6.useCallBack 7.useRef
+
+==Higher Order Components
+What , why , When, How
+
+==Life Cycle Methods of Components (Class as well as functions components)
+--Mount Update Unmount 
+
+==State management
+--prop drilling
+--Context
+
+==Custom Hooks
+--When To use
+--Code
+
+==Lazy Loading
+--Code Splitting 
+
+==Virtual Dom
+--Reconciliation
+--React Fiber
+--Diffing
+
+==SSR CSR
+--Difference
+--Benefits
+
+==Routing (RBAC)
+--react-router
+--Protected Routes
+--Dynamic Routing
+
+==Testing (Unit Testing)
+--React Testing (Test Cases)
+
+==Async Tasks 
+--API Calls
+--Events
+--Promises
+
+
+++Reusability Modularity Testability
+
+
+
+
 
 ---Component
 it is block of code which performs some function
@@ -19,6 +67,15 @@ to the components- WE PASS THEN AS PROPS
     -then we can pass then as props 
     -You can pass a default value of props in the components it will reflect on every instance of that component and you can also pass value to the same prop while using the component
 --React provides various in build functions. The order/way of using those functions are hooks- We hook those functions to bring them into Our code-
+
+Prop Drilling-
+consider you have a  parent component inside that A inside A ,You have B inside B,you have C and you need pass some props to C component. You gonna pass Through Main>A>B>C. this is called prob drilling. That is why We use useContext
+
+
+useContext
+--Context in React provides a way to pass data through a component tree without the need to prop-drill (i.e., pass props down manually at every level). In simple terms Context is Global variable
+--1. import react 2, create Context using React.createContext()3. export the context
+
 
 
 
@@ -66,6 +123,11 @@ useRef
 useCallBack
 --Cache a function definition so that it doesn't get recreated on every render.
 --use to save the rerenders of the child component
-{if you have a child component when you render the parent component (by any means like useState) it rerenders the child the child component also that is a un necessary render in order to the child component from rerendering wrap the child component in Memo}
+{if you have a child component when you render the parent component (by any means like useState) it rerenders the child component also that is a un necessary render in order to the child component from rerendering wrap the child component in Memo}
 --till the value of the props will not change the component will not re-render
---if you passing a functions in props then react.memo wont save you from rerendering. then the function we recreate after re-render- in order to save the functions for re-creating after re-render or freeze the function from recreating useCallBack comes to help
+--if you passing a functions in props then react.memo wont save you from rerendering. then the function we recreate after re-render- in order to save the functions for re-creating after re-render or freeze the function from recreating useCallBack comes to hel
+--moreover  passing an value in a dependency array, will rerender/ or re-create the function if the value of the dependency array changes
+
+
+---useNavigate
+it is used to navigate to the different component after a something happen (like when the login happen) 
