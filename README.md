@@ -131,3 +131,16 @@ useCallBack
 
 ---useNavigate
 it is used to navigate to the different component after a something happen (like when the login happen) 
+
+--Higher order component
+ HOC pattern typically works in React: Definition of a Higher Order Component (HOC): A higher-order component is a function that takes a component and returns a new component with enhanced functionality.
+
+
+
+ --Custom Hooks
+ A custom hook in React is a JavaScript function that allows you to encapsulate and reuse stateful logic across multiple components. It follows the naming convention useSomething and can leverage built-in hooks like useState, useEffect, or others.
+ --USE
+ Reusability , Readability,Testability
+ --When
+ repeated Logic , abstraction of complex logic , when logic involves multiple build-in hooks
+
