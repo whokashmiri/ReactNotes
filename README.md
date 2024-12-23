@@ -52,6 +52,21 @@ it is block of code which performs some function
 it is a function which returns some HTML or JSX
 
 
+--Virtual DOM Fiber Reconciliation
+The Virtual DOM (Document Object Model) is a concept used in modern web development to improve the performance and efficiency of web applications. It is a lightweight, in-memory representation of the actual DOM elements.
+
+Initial Render: When a web application is first loaded, the Virtual DOM creates a virtual representation of the UI components.
+Updates: When the state of the application changes (e.g., user interactions, data updates), the Virtual DOM updates its representation of the UI.
+Diffing: The Virtual DOM compares the new representation with the previous one to identify the changes (this process is called "diffing").
+Reconciliation: The Virtual DOM then updates only the parts of the actual DOM that have changed, rather than re-rendering the entire UI.
+
+Fiber is a rewrite of one of React’s core algorithms: the reconciler. The purpose of this algorithm is to take two DOM trees, compare the two and figure out what changes have been made.
+
+Before Fiber, React would reconcile and render elements all in one shot. This would block the main thread in the case that there were a lot of deep changes in the DOM tree. With Fiber, however, the process of reconciliation and rendering is split up into two phases:
+
+Reconciliation — React will figure out all the changes that need to occur based on the changes found in the DOM. It will then create a list of changes that need to occur. Since the algorithm uses the concepts of fibers, React is able to pause and resume this work at any time.
+Commit — From there, React can decide on which set of changes to render and commit to one. Once the rendering process begins, however, it cannot be interrupted as you could with reconciliation.
+By breaking up the process into two phases, React is better able to prioritize which work needs to get done to give a faster and smooth perception of your application.
 
 
 
@@ -143,4 +158,9 @@ it is used to navigate to the different component after a something happen (like
  Reusability , Readability,Testability
  --When
  repeated Logic , abstraction of complex logic , when logic involves multiple build-in hooks
+
+
+
+
+--Lazy Loading
 
